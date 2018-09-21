@@ -1,0 +1,10 @@
+<div class="item-details" *ngIf="selectedItem">
+
+    <h2>Product Details</h2>
+    <div><span>id: </span>{{selectedItem.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedItem.name" placeholder="name">
+      </label>
+    </div>
+  </div>
