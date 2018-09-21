@@ -12,13 +12,9 @@ export class ItemsComponent implements OnInit {
     this.getHeroes();
   }
   items : Item[];
-  selectedItem : Item;
-  onSelect(item: Item){
-    this.selectedItem = item;
-  }
   constructor(private itemService : ItemService){
   }
   getHeroes(): void {
-    this.itemService.getHeroes().subscribe(items => this.items = items);
+    this.itemService.getProducts().subscribe(items => this.items = items);
   }
 }

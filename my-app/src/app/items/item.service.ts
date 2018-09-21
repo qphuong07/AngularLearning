@@ -9,8 +9,14 @@ import { Observable, of } from 'rxjs';
   export class ItemService {
   
     constructor() { }
-    getHeroes(): Observable<Item[]> {
+    getProducts(): Observable<Item[]> {
+        //call server here
         return of(ITEMS);
       }
   
+    getProduct(id: number): Observable<Item> {
+      // TODO: send the message _after_ fetching the hero
+      //this.messageService.add(`HeroService: fetched hero id=${id}`);
+      return of(ITEMS.find(hero => hero.id === id));
+    }
   }
